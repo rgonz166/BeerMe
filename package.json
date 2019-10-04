@@ -1,7 +1,7 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "beerme",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "BeerMe project",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -11,10 +11,12 @@
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.17.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "mysql2": "^1.6.5",
+    "mysql2": "^1.7.0",
+    "passport": "^0.4.0",
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
@@ -26,5 +28,18 @@
     "eslint-plugin-prettier": "^3.1.0",
     "mocha": "^6.1.4",
     "prettier": "^1.17.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgonz166/BeerMe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/rgonz166/BeerMe/issues"
+  },
+  "homepage": "https://github.com/rgonz166/BeerMe#readme"
 }
