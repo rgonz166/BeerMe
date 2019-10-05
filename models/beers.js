@@ -24,13 +24,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    comments:{//additional comments of the beer that other users can add
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    }, 
     rating:{
       type: DataTypes.DECIMAL, 
       allowNull:false,
@@ -38,8 +31,9 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     }
-
-  }
-  );
+      
+  },{
+    timestamps:false
+  });
   return Beers;
 };

@@ -21,9 +21,9 @@ module.exports = function(sequelize, DataTypes) {
       rating: {
         type: DataTypes.INTEGER,
         allowNull: false,
-      },
-      timestamps:false
-    });
+      }
+    },{
+        timestamps:false
+      });
     return Post;
   };
-  
