@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "YOUR PASSWORD",
-    "database": "beers_db",
+    "database": "beerme_db",
     "host": "localhost",
     "dialect": "mysql"
   },
