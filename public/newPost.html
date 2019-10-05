@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>BeerMe | New Post</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/posts.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="row">
+        <div class="col-sm-2 mt-4">
+          <a class="btn btn-light" href="/posts">Go to <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-primary" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Text</div>
+          </div></a>
+        </div>
+      </div>
+      <div class="col-md-5 offset-md-3">
+        <form id="cms">
+          <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title">
+            <br />
+            <label for="body">Body:</label>
+            <textarea class="form-control" rows="10" id="body"></textarea>
+            <div class="form-group">
+              <label for="category">Select Category:</label>
+              <select class="custom-select" id="category">
+                <option value="pale-lager-pilsner">Pale Lager and Pilsner</option>
+                <option value="brown-ale">Brown Ale</option>
+                <option value="porter">Porter</option>
+                <option value="wheat-beer">Wheat Beer</option>
+                <option value="dark-lager">Dark Lager</option>
+                <option value="pale-ale">Pale Ale</option>
+                <option value="stout">Stout</option>
+                <option value="wild-sour-ale">Wild & Sour Ale</option>
+                <option value="german-bock">German Bock</option>
+                <option value="india-pale-ale">India Pale Ale</option>
+                <option value="belgian-style-ale">Beligian-Style Ale</option>
+                <option value="specialty-beer">Specialty Beer</option>
+              </select>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Custom Script -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/newPost.js" type="text/javascript"></script>
+
+</body>
+
+</html>
