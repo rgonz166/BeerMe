@@ -3,3 +3,6 @@ CREATE DATABASE beers_db;
 
 DROP DATABASE IF EXISTS accounts_db;
 CREATE DATABASE accounts_db;
+
+DROP DATABASE IF EXISTS posts_db;
+CREATE DATABASE posts_db;
