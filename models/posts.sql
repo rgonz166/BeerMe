@@ -1,0 +1,4 @@
+-- USE beerme_db;
+--  SELECT * FROM Posts;
+--  INSERT INTO Posts (username, nameBeer, body, rating)
+-- VALUES("esanchez","")

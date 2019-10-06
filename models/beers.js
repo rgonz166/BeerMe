@@ -2,13 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Beers = sequelize.define("Beers", {
-    nameBeer: {//name of the beer
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
+
     category:{//type of beer
       type: DataTypes.STRING,
       allowNull: false,
@@ -17,6 +11,14 @@ module.exports = function(sequelize, DataTypes) {
       }
 
     },
+    beername: {//name of the beer
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    
     reviews: {//review of the beer
       type: DataTypes.TEXT,
       allowNull: false,
@@ -31,6 +33,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     }
+
       
   },{
     timestamps:false
