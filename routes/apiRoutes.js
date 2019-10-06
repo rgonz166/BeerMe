@@ -21,4 +21,22 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+
+  // ================================================================================
+  // Posts api
+  // ================================================================================
+  
+  // Get api's
+  app.get("/api/posts", function(req,res){
+    db.Post.findAll({}).then(function(allPosts){
+      res.json(allPosts);
+    });
+  });
+
+
+
+  app.post("/posts/new", function(req,res){
+    db.Post.create()
+  })
 };
