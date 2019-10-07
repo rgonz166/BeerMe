@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "YOUR PASSWORD",
+    "password": "!Ezekiel21",
     "database": "beers_db",
     "host": "localhost",
     "dialect": "mysql"
