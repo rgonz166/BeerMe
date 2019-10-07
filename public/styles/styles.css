@@ -131,23 +131,13 @@ display: inline-block;
   padding: 10px 20px;
 }
 
-/* .inner-menu ul li:nth-child(1) {
-  float: left;
-}
-
-.inner-menu ul li:nth-child(2) {
-  float: left;
-}
-
-.inner-menu ul li:nth-child(3) {
-  float: left;
-} */
-
-
-
-
 .inner-menu ul li a:hover {
   color: #4056A1;
+}
+
+.inner-menu img {
+  width:200px;
+  height:123px;
 }
 
 #main-menu {
@@ -159,6 +149,8 @@ display: inline-block;
   background: rgb(255, 255, 255);
   float: left;
   color: #1b1407;
+  padding: 0px;
+  margin-bottom: 10px;
 }
 
 h2 {
