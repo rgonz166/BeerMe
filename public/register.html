@@ -10,20 +10,26 @@
 
     <div class="register-box">
       <h1>Register Here</h1>
-      <form>
+      <form id="register-form">
         <!-- USERNAME INPUT -->
         <label for="username">Username</label>
-        <input type="text" placeholder="Enter Username">
+        <input type="text" placeholder="Enter Username" id="username">
         <!-- EMAIL INPUT -->
         <label for="e-mail">E-mail</label>
-        <input type="email" placeholder="Enter e-mail">
+        <input type="email" placeholder="Enter e-mail" id="e-mail">
         <!-- PASSWORD INPUT -->
         <label for="password">Password</label>
-        <input type="password" placeholder="Enter Password">
+        <input type="password" placeholder="Enter Password" id="password">
         <input type="submit" value="Log In">
         <a href="#">Lost your Password?</a><br>
         <a href="/login">Have an account?</a>
       </form>
     </div>
+    <!-- jQuery -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="./js/register.js"></script>
   </body>
 </html>
