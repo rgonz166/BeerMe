@@ -2,6 +2,7 @@
   box-sizing: border-box;
 } 
 body {
+  overflow-x: hidden;
     margin: 0;
     padding: 0;
     background:rgb(238, 234, 224);
@@ -9,7 +10,22 @@ body {
     height: 100vh;
     background-attachment: fixed;
   }
+
+  /* bootstrap carousel */
+  .carousel {
+    width: 100vh;
+    max-height: 100vh;
+    margin: auto;
+    margin-top: 12%;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   
+  /* login box */
   .login-box, .register-box {
     width: 320px;
     height: 420px;
