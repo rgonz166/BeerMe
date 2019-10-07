@@ -1,12 +1,13 @@
-*{
+ *{
   box-sizing: border-box;
-}
+} 
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(0deg, rgba(22,22,22,1) 0%, rgba(166,101,0,1) 100%);
+    background:rgb(238, 234, 224);
     font-family: sans-serif;
     height: 100vh;
+    background-attachment: fixed;
   }
   
   .login-box, .register-box {
@@ -83,3 +84,72 @@ body {
   .login-box a:hover,.register-box a:hover {
     color: #fff;
   }
+
+
+.navbar {
+  background: rgb(241, 170, 38);
+}
+
+.inner-menu {
+margin: 0 auto;
+width: 1170px;
+} 
+
+.inner-menu ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+  text-align: center; 
+}
+
+.inner-menu ul li {
+float: none;
+display: inline-block;
+}
+
+.inner-menu ul li a {
+  color: rgb(255, 248, 248);
+  font-size: 20px;
+  text-transform: uppercase;
+  display: block;
+  padding: 10px 20px;
+}
+
+/* .inner-menu ul li:nth-child(1) {
+  float: left;
+}
+
+.inner-menu ul li:nth-child(2) {
+  float: left;
+}
+
+.inner-menu ul li:nth-child(3) {
+  float: left;
+} */
+
+
+
+
+.inner-menu ul li a:hover {
+  color: #4056A1;
+}
+
+#main-menu {
+  position: relative; 
+ 
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  float: left;
+  color: #1b1407;
+}
+
+h2 {
+  padding: 20px;
+  color: rgb(10, 13, 26);
+}
+
+
+
+
