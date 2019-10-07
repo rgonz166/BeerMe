@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
       }
     },{
-        timestamps:false
+        timestamps:true
       });
     return Post;
   };
