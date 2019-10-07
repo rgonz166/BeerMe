@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "@4DaCode",
-    "database": "exampledb",
+    "password": "YOUR PASSWORD",
+    "database": "beerme_db",
     "host": "localhost",
     "dialect": "mysql"
   },
