@@ -1,14 +1,14 @@
 {
   "development": {
-    "username": "root",
-    "password": "!Ezekiel21",
-    "database": "beers_db",
+    "username": "",
+    "password": "",
+    "database": "",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "@4DaCode",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

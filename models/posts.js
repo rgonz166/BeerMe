@@ -1,11 +1,10 @@
-//table created for beers_db
-
 module.exports = function(sequelize, DataTypes) {
-  var Beers = sequelize.define(
-    "Beers",
-    {
+    var Post = sequelize.define("Post", {
+      username: {
+        type: DataTypes.STRING,
+        defaultValue: "Anonymous"
+      },
       category: {
-        //type of beer
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -13,16 +12,13 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       beername: {
-        //name of the beer
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-
       reviews: {
-        //review of the beer
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
@@ -30,16 +26,11 @@ module.exports = function(sequelize, DataTypes) {
         }
       },
       rating: {
-        type: DataTypes.DECIMAL,
+        type: DataTypes.INTEGER,
         allowNull: false,
-        validate: {
-          len: [1]
-        }
       }
-    },
-    {
-      timestamps: false
-    }
-  );
-  return Beers;
-};
+    },{
+        timestamps:false
+      });
+    return Post;
+  };
