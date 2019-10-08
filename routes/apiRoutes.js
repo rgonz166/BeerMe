@@ -1,15 +1,10 @@
-// *********************************************************************************
-// api-routes.js - this file offers a set of routes for displaying and saving data to the db
-// *********************************************************************************
-
-// Dependencies
-// =============================================================
-
 // Requiring our Todo model
 var db = require("../models");
 
 // Routes
-// =============================================================
+  // ===========================================================================
+  //                                    Beers
+  // ===========================================================================
 module.exports = function(app) {
   // gets all the beers information from the beerme_db
   app.get("/api/beers/", function(req, res) {
@@ -104,4 +99,52 @@ module.exports = function(app) {
       res.json(dbBeers);
     });
   });
+  
+  // ===========================================================================
+  //                          Users - Storing to Database
+  // ===========================================================================
+
+  app.get("/api/users", function(req,res){
+    db.User.findAll({}).then(function(users){
+      res.json(users);
+    });
+  });
+
+  app.post("/api/user",function(req, res){
+    console.log(req.body);
+    db.User.create({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password
+    }).then(function(dbUser){
+      res.json(dbUser);
+    });
+  });
+
+  // ===========================================================================
+  //                          Users - Logging in to Database
+  // ===========================================================================
+
+
+
+
+  // ===========================================================================
+  //                          Posts - Storing to Database
+  // ===========================================================================
+
+  // Add post to database
+  app.post("/api/post",function(req,res){
+    console.log();
+    db.Post.create({
+      userId: req.body.userId,
+      category: req.body.category,
+      beername: req.body.beerName,
+      review: req.body.review,
+      rating: req.body.rating
+    }).then(function(dbPost){
+      res.json(dbPost);
+    });
+  });
+  // Update post to database
+
 };

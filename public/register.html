@@ -3,27 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeerMe | Register</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>BeerMe | Register</title>    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/login.css">
   </head>
   <body>
 
     <div class="register-box">
       <h1>Register Here</h1>
-      <form>
+      <form id="register-form">
         <!-- USERNAME INPUT -->
         <label for="username">Username</label>
-        <input type="text" placeholder="Enter Username">
+        <input type="text" placeholder="Enter Username" id="username">
         <!-- EMAIL INPUT -->
         <label for="e-mail">E-mail</label>
-        <input type="email" placeholder="Enter e-mail">
+        <input type="email" placeholder="Enter e-mail" id="e-mail">
         <!-- PASSWORD INPUT -->
         <label for="password">Password</label>
-        <input type="password" placeholder="Enter Password">
+        <input type="password" placeholder="Enter Password" id="password">
         <input type="submit" value="Log In">
         <a href="#">Lost your Password?</a><br>
         <a href="/login">Have an account?</a>
       </form>
     </div>
+    <!-- jQuery -->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="./js/register.js"></script>
   </body>
 </html>
