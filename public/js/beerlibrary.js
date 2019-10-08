@@ -1,5 +1,8 @@
-.card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-}
+window.onload = function() {
+  $(".btn-primary").on("click", function(event) {
+    // Preventing the button from trying to submit the form
+    event.preventDefault();
+    // Storing the artist name
+    console.log("here");
+  });
+};
