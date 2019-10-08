@@ -8,11 +8,6 @@ $(document).ready(function(){
 // Event listener when form is submitted
 $(registerForm).on("submit", handleFormSubmit);
 
-
-
-
-
-
     function handleFormSubmit(event) {
         event.preventDefault();
         // Wont submit the post if we are missing a body, title, or author
