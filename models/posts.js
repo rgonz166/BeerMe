@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
-      username: {
+      userId: {
         type: DataTypes.STRING,
         defaultValue: "Anonymous"
       },
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      reviews: {
+      review: {
         type: DataTypes.TEXT,
         allowNull: false,
         validate: {
