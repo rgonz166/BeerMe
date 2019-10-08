@@ -45,7 +45,7 @@ $(document).ready(function () {
 
     function submitNewPost(post) {
         $.post("/api/post", post, function () {
-            window.location.href = "/api/posts";
+            window.location.href = "/posts";
         });
     }
 });
