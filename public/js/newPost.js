@@ -34,7 +34,7 @@ $(document).ready(function () {
         // Constructing a newPost object to hand to the database
         var newPost = {
             userId: 4,
-            category: categorySelect.val(),
+            category: categorySelect.find(":selected").text(),
             beerName: beerNameInput.val().trim(),
             review: reviewInput.val().trim(),
             rating: ratingSelect
