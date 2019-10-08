@@ -1,0 +1,6 @@
+body {
+    background: url(styles/images/fred-crandon-fulpvaLUX3A-unsplash.jpg) rgb(238, 234, 224);
+    background: linear-gradient();
+    background-size: cover;
+    background-repeat: no-repeat;
+}
