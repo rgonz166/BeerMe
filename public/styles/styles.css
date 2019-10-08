@@ -4,7 +4,7 @@
 body {
     margin: 0;
     padding: 0;
-    background:rgb(238, 234, 224);
+    background:rgba(248, 248, 246, 0.945);
     font-family: sans-serif;
     height: 100vh;
     background-attachment: fixed;
