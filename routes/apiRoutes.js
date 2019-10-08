@@ -131,5 +131,20 @@ module.exports = function(app) {
   // ===========================================================================
   //                          Posts - Storing to Database
   // ===========================================================================
-  
+
+  // Add post to database
+  app.post("/api/post",function(req,res){
+    console.log();
+    db.Post.create({
+      userId: req.body.userId,
+      category: req.body.category,
+      beername: req.body.beerName,
+      review: req.body.review,
+      rating: req.body.rating
+    }).then(function(dbPost){
+      res.json(dbPost);
+    });
+  });
+  // Update post to database
+
 };
