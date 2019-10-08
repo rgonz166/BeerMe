@@ -105,7 +105,7 @@ body {
     color: #fff;
   }
 
-
+/* Begin Navbar */
 .navbar {
   background: rgb(241, 170, 38);
 }
@@ -149,6 +149,7 @@ display: inline-block;
  
 }
 
+/* Begin post page cards */
 .card {
   background: rgb(255, 255, 255);
   float: left;
@@ -157,6 +158,7 @@ display: inline-block;
   margin-bottom: 10px;
 }
 
+/* heading on post page */
 h2 {
   padding: 20px;
   color: rgb(10, 13, 26);
