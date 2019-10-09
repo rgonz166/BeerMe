@@ -23,7 +23,7 @@ window.onload = function() {
       var beerCategory = rmHyphen[0] + " " + rmHyphen[1] + " " + rmHyphen[2];
       console.log(beerCategory);
       ajaxGet(beerCategory);
-    } 
+    }
     if (rmHyphen.length < 2) {
       var beerCategory = id;
       console.log(beerCategory);
@@ -44,23 +44,23 @@ window.onload = function() {
   }
   function ajaxGet(beerCategory) {
     console.log("there beer goes into ajaxGet(): " + beerCategory);
-    // $.ajax({
-    //   type: "GET",
-    //   url: "/api/beers/" + beerCategory,
-    //   success: function(result) {
-    //     $("#getResultDiv ul").empty();
-    //     var cusList = " ";
-    //     $.each(result, function(i, beer) {
-    //       $("#getResultDiv .list-group").append(
-    //         beer.beername + " " + beer.reviews + " " + beer.rating + "<br>"
-    //       );
-    //     });
-    //     console.log("Success: ", result);
-    //   },
-    //   error: function(e) {
-    //     $("#getResultDiv").html("<strong>Error</strong>");
-    //     console.log("Error: ", e);
-    //   }
-    // });
+    $.ajax({
+      type: "GET",
+      url: "/api/beers/" + beerCategory,
+      success: function(result) {
+        $("#getResultDiv ul").empty();
+        $.each(result, function(i, beers) {
+          $("#getResultDiv .list-group").append(
+            beers.beername + " " + beers.category + " " + beers.rating + "<br>"
+          );
+        });
+        console.log("Success: ", result);
+      },
+      error: function(e) {
+        $("#getResultDiv").html("<strong>Error</strong>");
+        console.log("ERROR: ", e);
+      }
+    });
   }
 };
+//figure out how to post to its particular card
