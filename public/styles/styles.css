@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background:rgb(238, 234, 224);
+    background:rgba(248, 248, 246, 0.945);
     font-family: sans-serif;
     height: 100vh;
     background-attachment: fixed;
@@ -14,7 +14,12 @@ body {
   /* bootstrap carousel */
   .carousel-item {
     height: 100vh;
-    z-index: 1;
+    z-index: 1; 
+  }
+
+  .carousel {
+    top: 20%;
+    overflow: hidden;
   }
  
   /* Welcome message */
@@ -126,9 +131,12 @@ body {
     color: #fff;
   }
 
-
+/* Begin Navbar */
 .navbar {
-  background: rgb(241, 170, 38);
+  width: 100%;
+  background: rgba(241, 170, 38, 0.959);
+  position: absolute;
+  z-index: 2;
 }
 
 .inner-menu {
@@ -171,6 +179,7 @@ display: inline-block;
  
 }
 
+/* Begin post page cards */
 .card {
   background: rgb(255, 255, 255);
   float: left;
@@ -179,6 +188,7 @@ display: inline-block;
   margin-bottom: 10px;
 }
 
+/* heading on post page */
 h2 {
   padding: 20px;
   color: rgb(10, 13, 26);
