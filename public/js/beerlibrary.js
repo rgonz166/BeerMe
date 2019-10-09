@@ -1,5 +1,7 @@
 window.onload = function() {
   $(".btn-primary").on("click", function(event) {
+    console.log(this);
+    
     var buttonName = this.className;
     console.log(buttonName); //will show what button beer is being clicked on
     var res = buttonName.split(" "); // will split the class string name by spaces
@@ -51,7 +53,12 @@ window.onload = function() {
         $("#getResultDiv ul").empty();
         $.each(result, function(i, beers) {
           $("#getResultDiv .list-group").append(
-            beers.beername + " " + beers.category + " " + beers.rating + "<br>"
+            "Beer Name: " +
+              beers.beername +
+              " " +
+              "Rating: " +
+              beers.rating +
+              "<br>"
           );
         });
         console.log("Success: ", result);
@@ -64,3 +71,4 @@ window.onload = function() {
   }
 };
 //figure out how to post to its particular card
+//if tag 
