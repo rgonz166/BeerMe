@@ -14,7 +14,12 @@ body {
   /* bootstrap carousel */
   .carousel-item {
     height: 100vh;
-    z-index: 1;
+    z-index: 1; 
+  }
+
+  .carousel {
+    top: 20%;
+    overflow: hidden;
   }
  
   /* Welcome message */
@@ -107,7 +112,10 @@ body {
 
 /* Begin Navbar */
 .navbar {
-  background: rgb(241, 170, 38);
+  width: 100%;
+  background: rgba(241, 170, 38, 0.959);
+  position: absolute;
+  z-index: 2;
 }
 
 .inner-menu {
