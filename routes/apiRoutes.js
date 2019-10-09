@@ -137,15 +137,21 @@ module.exports = function(app) {
 
   // Add post to database
   app.post("/api/post",function(req,res){
-    console.log();
+    console.log(req.body);
     db.Post.create({
       userId: req.body.userId,
       category: req.body.category,
-      beername: req.body.beerName,
+      beerName: req.body.beerName,
       review: req.body.review,
       rating: req.body.rating
     }).then(function(dbPost){
       res.json(dbPost);
+    });
+  });
+
+  app.get("/api/posts", function (req, res) {
+    db.Post.findAll({}).then(function (posts) {
+      res.json(posts);
     });
   });
   // Update post to database

@@ -7,42 +7,58 @@
   <!-- Latest compiled and minified CSS & JS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles/posts.css">
+  <link rel="stylesheet" href="../styles/styles.css">
 </head>
 
 <body>
+  <div class="navbar">
+    <div id="main-menu"></div>
+    <div class="inner-menu">
+      <ul>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href=""><img src="../IMAGES/Logo.png" alt="logo"></a></li>
+        <li><a href="/beers">Beers</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="row">
-        <div class="col-sm-2 mt-4">
-          <a class="btn btn-light" href="/posts">Go to <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-primary" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Text</div>
-          </div></a>
-        </div>
-      </div>
       <div class="col-md-5 offset-md-3">
-        <form id="cms">
+        <form id="new-post-form">
           <div class="form-group">
-            <label for="title">Title:</label>
-            <input type="text" class="form-control" id="title">
+            <label for="beer-name">Beer Name:</label>
+            <input type="text" class="form-control" id="beer-name">
             <br />
-            <label for="body">Body:</label>
-            <textarea class="form-control" rows="10" id="body"></textarea>
+            <label for="review">Review:</label>
+            <textarea class="form-control" rows="10" id="review"></textarea>
+            <br>
+            <label for="rating">Rating: </label>
+            <div id="rating" class="rating">
+              <span><input type="radio" name="rating" id="str5" value="5"><label for="str5"></label></span>
+              <span><input type="radio" name="rating" id="str4" value="4"><label for="str4"></label></span>
+              <span><input type="radio" name="rating" id="str3" value="3"><label for="str3"></label></span>
+              <span><input type="radio" name="rating" id="str2" value="2"><label for="str2"></label></span>
+              <span><input type="radio" name="rating" id="str1" value="1"><label for="str1"></label></span>
+            </div>
+            <br><br>
             <div class="form-group">
               <label for="category">Select Category:</label>
               <select class="custom-select" id="category">
-                <option value="pale-lager-pilsner">Pale Lager and Pilsner</option>
-                <option value="brown-ale">Brown Ale</option>
-                <option value="porter">Porter</option>
-                <option value="wheat-beer">Wheat Beer</option>
-                <option value="dark-lager">Dark Lager</option>
-                <option value="pale-ale">Pale Ale</option>
-                <option value="stout">Stout</option>
-                <option value="wild-sour-ale">Wild & Sour Ale</option>
-                <option value="german-bock">German Bock</option>
-                <option value="india-pale-ale">India Pale Ale</option>
-                <option value="belgian-style-ale">Beligian-Style Ale</option>
-                <option value="specialty-beer">Specialty Beer</option>
+                <option value="select-one">Select a category of beer</option>
+                <option value="pale-lager-pilsner" data-name="Pale Lager and Pilsner">Pale Lager and Pilsner</option>
+                <option value="brown-ale" data-name="Brown Ale">Brown Ale</option>
+                <option value="porter" data-name="Porter">Porter</option>
+                <option value="wheat-beer" data-name="Wheat Beer">Wheat Beer</option>
+                <option value="dark-lager" data-name="Dark Lager">Dark Lager</option>
+                <option value="pale-ale"data-name="Pale Ale">Pale Ale</option>
+                <option value="stout" data-name="Stout">Stout</option>
+                <option value="wild-sour-ale" data-name="Wild & Sour Ale">Wild & Sour Ale</option>
+                <option value="german-bock" data-name="German Bock">German Bock</option>
+                <option value="india-pale-ale" data-name="India Pale Ale">India Pale Ale</option>
+                <option value="belgian-style-ale" data-name="Belgian-Style Ale">Beligian-Style Ale</option>
+                <option value="specialty-beer" data-name="Specialty Beer">Specialty Beer</option>
               </select>
             </div>
             <br />
@@ -54,8 +70,13 @@
   </div>
   <!-- Custom Script -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<<<<<<< HEAD
   <script src="js/newPost.js" type="text/javascript"></script>
   
+=======
+  <script src="../js/newPost.js" type="text/javascript"></script>
+
+>>>>>>> master
 
 </body>
 
