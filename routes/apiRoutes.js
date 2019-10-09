@@ -104,11 +104,16 @@ module.exports = function(app) {
   //                          Users - Storing to Database
   // ===========================================================================
 
-  app.get("/api/users", function(req,res){
-    db.User.findAll({}).then(function(users){
-      res.json(users);
-    });
-  });
+  // app.get("/api/users", function(req,res){
+  //   db.User.findAll({}).then(function(users){
+  //     res.json(users);
+  //   });
+  // });
+
+  // Get username and check password
+  app.get("/api/users/:user", function(req,res){
+    db.User.
+  })
 
   app.post("/api/user",function(req, res){
     console.log(req.body);

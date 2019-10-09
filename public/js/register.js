@@ -29,6 +29,10 @@ $(registerForm).on("submit", handleFormSubmit);
 
         submitNewUser(newUser);
     }
+    // Check if username exists
+    function checkUser(user){
+
+    }
 
     function submitNewUser(user) {
         $.post("/api/user", user, function () {

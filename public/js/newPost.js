@@ -8,6 +8,7 @@ $(document).ready(function () {
     });
 
     // Getting jQuery references to the post body, title, form, and author select
+    /* Get username from cookie */
     var userId = $("#user-id");
     var beerNameInput = $("#beer-name");
     var reviewInput = $("#review");
@@ -28,7 +29,7 @@ $(document).ready(function () {
         event.preventDefault();
         // Wont submit the post if we are missing a body, title, or author
         if (!beerNameInput.val().trim() || !reviewInput.val().trim() || (ratingSelect === undefined) || (categorySelect.val() === "select-one")){
-            // console.log();
+            // console.log("Cookie: "+document.cookie);
             return;
         }
         // Constructing a newPost object to hand to the database
