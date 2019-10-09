@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
     var Post = sequelize.define("Post", {
       userId: {
-        type: DataTypes.STRING,
-        defaultValue: "Anonymous"
+        type: DataTypes.INTEGER,
+        allowNull: false
       },
       category: {
         type: DataTypes.STRING,
@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
           len: [1]
         }
       },
-      beername: {
+      beerName: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
