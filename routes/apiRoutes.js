@@ -12,7 +12,8 @@ module.exports = function(app) {
       res.json(dbBeers);
     });
   });
-
+//-----------------------
+//I am going to need to use this "/api/beers/:category" to print out all the beers
   // Gets the beers by category from beerme_db
   app.get("/api/beers/:category", function(req, res) {
     db.Beers.findAll({
@@ -23,6 +24,8 @@ module.exports = function(app) {
       res.json(dbBeers);
       console.log(req.params.category);
     });
+    // var name = re.params.category;
+    //here(name); //USE THIS TO GET CATEGORY----------------------
   });
 
   // Gets a single beer from beerme_db
