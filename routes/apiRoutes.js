@@ -2,9 +2,9 @@
 var db = require("../models");
 
 // Routes
-  // ===========================================================================
-  //                                    Beers
-  // ===========================================================================
+// ===========================================================================
+//                                    Beers
+// ===========================================================================
 module.exports = function(app) {
   // gets all the beers information from the beerme_db
   app.get("/api/beers/", function(req, res) {
@@ -99,24 +99,24 @@ module.exports = function(app) {
       res.json(dbBeers);
     });
   });
-  
+
   // ===========================================================================
   //                          Users - Storing to Database
   // ===========================================================================
 
-  app.get("/api/users", function(req,res){
-    db.User.findAll({}).then(function(users){
+  app.get("/api/users", function(req, res) {
+    db.User.findAll({}).then(function(users) {
       res.json(users);
     });
   });
 
-  app.post("/api/user",function(req, res){
+  app.post("/api/user", function(req, res) {
     console.log(req.body);
     db.User.create({
       username: req.body.username,
       email: req.body.email,
       password: req.body.password
-    }).then(function(dbUser){
+    }).then(function(dbUser) {
       res.json(dbUser);
     });
   });
@@ -125,15 +125,12 @@ module.exports = function(app) {
   //                          Users - Logging in to Database
   // ===========================================================================
 
-
-
-
   // ===========================================================================
   //                          Posts - Storing to Database
   // ===========================================================================
 
   // Add post to database
-  app.post("/api/post",function(req,res){
+  app.post("/api/post", function(req, res) {
     console.log(req.body);
     db.Post.create({
       userId: req.body.userId,
@@ -141,16 +138,15 @@ module.exports = function(app) {
       beerName: req.body.beerName,
       review: req.body.review,
       rating: req.body.rating
-    }).then(function(dbPost){
+    }).then(function(dbPost) {
       res.json(dbPost);
     });
   });
 
-  app.get("/api/posts", function (req, res) {
-    db.Post.findAll({}).then(function (posts) {
+  app.get("/api/posts", function(req, res) {
+    db.Post.findAll({}).then(function(posts) {
       res.json(posts);
     });
   });
   // Update post to database
-
 };
