@@ -46,7 +46,10 @@ body {
   }
 
   
-  
+  .login-section {
+    
+  }
+
   /* login box */
   .login-box, .register-box {
     width: 320px;
@@ -151,6 +154,7 @@ display: inline-block;
   text-transform: uppercase;
   display: block;
   padding: 10px 20px;
+  text-decoration: none;
 }
 
 .inner-menu ul li a:hover {
