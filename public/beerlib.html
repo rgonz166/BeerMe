@@ -10,80 +10,133 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/beerlib.css" media="screen" title="no title">
 
+  <script src="js/beerlibrary.js"></script>
+  <script src="../routes/apiRoutes.js"></script>
 </head>
 
 <body>
 
   <div class="card w-50">
     <div class="card-body">
-      <h5 class="card-title">Pale Lager and Pilsner</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <h5 class="card-title" value="pale-lager-pilsner">Pale Lager and Pilsner</h5>
+      <a href="#" class="pilsner btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Brown Ale</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="brown-ale btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
+
+
+  </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Porter</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="porter btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Wheat Beer</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="wheat-beer btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Dark Lager</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="dark-lager btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Pale Ale</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="pale-ale btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
-      <h5 class="card-title">Stout</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <h5 class="card-title" value="stout">Stout</h5>
+      <a href="#" class="stout btn btn-primary">Button</a>
+      <div id="getResultDiv">
+        <ul class="list-group">
+        </ul>
+      </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Wild and Sour Ale</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="wild-sour-ale btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
-      <h5 class="card-title">German Bock</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <h5 class="card-title">German Black</h5>
+      <a href="#" class="german-black btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">India Pale Ale</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="india-pale-ale btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
-      <h5 class="card-title">Belgian-Style Ale</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <h5 class="card-title">Belgian Style Ale</h5>
+      <a href="#" class="belgian-style-ale btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title">Specialty Beer</h5>
-      <a href="#" class="btn btn-primary">Button</a>
+      <a href="#" class="specialty-beer btn btn-primary">Button</a>
+      <div id="getResultDiv">
+          <ul class="list-group">
+          </ul>
+        </div>
     </div>
   </div>
 
@@ -91,17 +144,17 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="js/beerlibrary.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
 
 </html>
