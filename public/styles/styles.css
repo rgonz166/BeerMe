@@ -18,9 +18,11 @@ body {
   }
  
   /* Welcome message */
-  .welcome h1{
-    font-family: 'Ultra', serif;
-    font-size: 45px;
+  .welcome h1 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 3rem;
     position: absolute;
     color: #fff;
     z-index: 2;
@@ -28,6 +30,22 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .welcome h3 {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+  }
+
+  
   
   /* login box */
   .login-box, .register-box {
