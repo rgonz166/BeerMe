@@ -1,233 +1,203 @@
- * {
-   box-sizing: border-box;
- }
+ *{
+  box-sizing: border-box;
+} 
+body {
+  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background:rgba(248, 248, 246, 0.945);
+    font-family: sans-serif;
+    height: 100vh;
+    background-attachment: fixed;
+  }
 
- body {
-   overflow-x: hidden;
-   margin: 0;
-   padding: 0;
-   background: rgba(248, 248, 246, 0.945);
-   font-family: sans-serif;
-   height: 100vh;
-   background-attachment: fixed;
- }
+  /* bootstrap carousel */
+  .carousel-item {
+    height: 100vh;
+    z-index: 1; 
+  }
 
- /* bootstrap carousel */
- .carousel-item {
-   height: 100vh;
-   z-index: 1;
- }
+  .carousel {
+    /* top: 20%; */
+    overflow: hidden;
+  }
+ 
+  /* Welcome message */
+  .welcome h1{
+    font-family: 'Ultra', serif;
+    font-size: 45px;
+    position: absolute;
+    color: #fff;
+    z-index: 2;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+  
+  /* login box */
+  .login-box, .register-box {
+    width: 320px;
+    height: 420px;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+  }
+  .login-box {
+    padding: 70px 30px;
+  }
+  .register-box {
+    padding: 50px 30px;
+  }
 
- .carousel {
-   overflow: hidden;
- }
+  .login-box h1,.register-box h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  .login-box label,.register-box label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .login-box input,.register-box input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .login-box input[type="text"], .login-box input[type="password"],
+  .register-box input[type="text"], .register-box input[type="password"],
+  .register-box input[type="email"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .login-box input[type="submit"],.register-box input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #b80f22;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+  }
+  
+  .login-box input[type="submit"]:hover,.register-box input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+  }
+  
+  .login-box a,.register-box a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+  }
+  
+  .login-box a:hover,.register-box a:hover {
+    color: #fff;
+  }
 
- /* Welcome message */
- .welcome h1 {
-   font-family: 'Lato', sans-serif;
-   text-transform: uppercase;
-   font-weight: 600;
-   font-size: 3rem;
-   position: absolute;
-   color: #fff;
-   z-index: 2;
-   top: 35%;
-   left: 50%;
-   transform: translate(-50%, -50%);
- }
+/* Begin Navbar */
+.navbar {
+  width: 100%;
+  background: #f6e7cbb6;
+  /* position: absolute; */
+  z-index: 2;
+}
 
- .welcome h3 {
-   font-family: 'Lato', sans-serif;
-   text-transform: uppercase;
-   font-weight: 300;
-   font-size: 2rem;
-   position: absolute;
-   color: #fff;
-   z-index: 2;
-   top: 50%;
-   left: 55%;
-   transform: translate(-50%, -50%);
-   justify-content: center;
- }
+.inner-menu {
+margin: auto;
+width: 1170px;
+} 
 
+.inner-menu ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+  text-align: center; 
+}
 
+.inner-menu ul li {
+float: none;
+display: inline-block;
+} 
 
- /* login box */
- .login-box,
- .register-box {
-   width: 320px;
-   height: 420px;
-   color: #fff;
-   top: 50%;
-   left: 50%;
-   position: absolute;
-   transform: translate(-50%, -50%);
-   box-sizing: border-box;
- }
+.inner-menu ul li a {
+  color: rgb(255, 248, 248);
+  font-size: 20px;
+  text-transform: uppercase;
+  display: block;
+  /* padding: 10px 20px; */
+}
 
- .login-box {
-   padding: 70px 30px;
- }
+.inner-menu ul li a:hover {
+  color: #4056A1;
+}
 
- .register-box {
-   padding: 50px 30px;
- }
+.inner-menu img {
+  width:200px;
+  height:123px;
+}
 
- .login-box h1,
- .register-box h1 {
-   margin: 0;
-   padding: 0 0 20px;
-   text-align: center;
-   font-size: 22px;
- }
+/* Begin post page cards */
+.card {
+  background: rgb(255, 255, 255);
+  float: left;
+  color: #1b1407;
+  padding: 0px;
+  margin-bottom: 10px;
+}
 
- .login-box label,
- .register-box label {
-   margin: 0;
-   padding: 0;
-   font-weight: bold;
-   display: block;
- }
-
- .login-box input,
- .register-box input {
-   width: 100%;
-   margin-bottom: 20px;
- }
-
- .login-box input[type="text"],
- .login-box input[type="password"],
- .register-box input[type="text"],
- .register-box input[type="password"],
- .register-box input[type="email"] {
-   border: none;
-   border-bottom: 1px solid #fff;
-   background: transparent;
-   outline: none;
-   height: 40px;
-   color: #fff;
-   font-size: 16px;
- }
-
- .login-box input[type="submit"],
- .register-box input[type="submit"] {
-   border: none;
-   outline: none;
-   height: 40px;
-   background: #b80f22;
-   color: #fff;
-   font-size: 18px;
-   border-radius: 20px;
- }
-
- .login-box input[type="submit"]:hover,
- .register-box input[type="submit"]:hover {
-   cursor: pointer;
-   background: #ffc107;
-   color: #000;
- }
-
- .login-box a,
- .register-box a {
-   text-decoration: none;
-   font-size: 12px;
-   line-height: 20px;
-   color: darkgrey;
- }
-
- .login-box a:hover,
- .register-box a:hover {
-   color: #fff;
- }
-
- /* Begin Navbar */
- .navbar {
-   width: 100%;
-   background-color: rgb(246, 231, 203, 0.5);
-   position: absolute;
-   z-index: 2;
- }
-
- .inner-menu {
-   margin: auto;
-   width: 1170px;
- }
-
- .inner-menu ul {
-   margin: 0;
-   padding: 0;
-   list-style: none;
-   text-align: center;
- }
-
- .inner-menu ul li {
-   float: none;
-   display: inline-block;
- }
-
- .inner-menu ul li a {
-   color: #1b1407;
-   font-size: 20px;
-   text-transform: uppercase;
-   display: block;
-   text-decoration: none;
-   padding: 20px
- }
-
- .inner-menu img {
-   width: 200px;
-   height: 123px;
- }
-
- /* Begin post page cards */
- .card {
-   background: rgb(255, 255, 255);
-   float: left;
-   color: #1b1407;
-   padding: 0px;
-   margin-bottom: 10px;
- }
-
- /* heading on post page */
+/* heading on post page */
  h2 {
-   padding: 20px;
-   color: rgb(10, 13, 26);
- }
+  padding: 20px;
+  color: rgb(10, 13, 26);
+}
 
- .rating {
-   width: 300px;
- }
+.rating {
+    /* float:left; */
+    width:300px;
+}
+.rating span { float:right; position:relative; }
+.rating span input {
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
+}
+.rating span label {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    text-align:center;
+    color:#FFF;
+    background:#ccc;
+    font-size:30px;
+    margin-right:2px;
+    line-height:30px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.rating span:hover ~ span label,
+.rating span:hover label,
+.rating span.checked label,
+.rating span.checked ~ span label {
+    background:#F90;
+    color:#FFF;
+}
 
- .rating span {
-   float: right;
-   position: relative;
- }
 
- .rating span input {
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   opacity: 0;
- }
 
- .rating span label {
-   display: inline-block;
-   width: 30px;
-   height: 30px;
-   text-align: center;
-   color: #FFF;
-   background: #ccc;
-   font-size: 30px;
-   margin-right: 2px;
-   line-height: 30px;
-   border-radius: 50%;
-   -webkit-border-radius: 50%;
- }
-
- .rating span:hover~span label,
- .rating span:hover label,
- .rating span.checked label,
- .rating span.checked~span label {
-   background: #F90;
-   color: #FFF;
- }
