@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./styles/styles.css" media="screen" title="no title">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./styles/beerlib.css" media="screen" title="no title">
 
   <script src="js/beerlibrary.js"></script>
   <script src="../routes/apiRoutes.js"></script>
@@ -21,12 +23,13 @@
         <div class="inner-menu">
           <ul>
             <li><a href="/posts">Post</a></li>
-            <li><a href="index.html"><img src="./IMAGES/Logo.png" alt="logo"></a></li>
+            <li><a href="/"><img src="./IMAGES/Logo.png" alt="logo"></a></li>
             <li><a href="/beers">Beers</a></li>
           </ul>
         </div>
       </div>
 
+  <div class="mt-5 mb-5"></div>
   <div class="card w-50">
     <div class="card-body">
       <h5 class="card-title" value="pale-lager-pilsner">Pale Lager and Pilsner</h5>
@@ -148,8 +151,26 @@
           <ul class="list-group">
           </ul>
         </div>
+
+        <button id="scrollUp">
+            <i class="material-icons">arrow_upwards</i>
+        </button>
+   
+
+
     </div>
   </div>
+
+  <script>
+      const btnScrollToTop = document.querySelector("#scrollUp");
+      btnScrollToTop.addEventListener("click" , function () {
+          window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth"
+          });
+      });
+  </script>
 
 
 
@@ -157,15 +178,10 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
