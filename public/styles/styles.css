@@ -25,30 +25,25 @@ body {
     /* top: 20%; */
     overflow: hidden;
   }
- 
-  /* Welcome message */
-  .welcome h1{
-    font-family: 'Ultra', serif;
-    font-size: 45px;
-    position: absolute;
-    color: #fff;
-    z-index: 2;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } 
+  .login-section {
+    background-image: url(images/fred-crandon-fulpvaLUX3A-unsplash.jpg);
+    background-size: cover;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+  }
   
   /* login box */
   .login-box, .register-box {
     width: 320px;
     height: 420px;
     color: #fff;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
   }
+  
   .login-box {
     padding: 70px 30px;
   }
@@ -117,8 +112,8 @@ body {
 /* Begin Navbar */
 .navbar {
   width: 100%;
-  background: #f6e7cbc7;
-  /* position: absolute; */
+  background: #f6e7cbb6;
+  position: absolute;
   z-index: 2;
 }
 
@@ -140,20 +135,20 @@ display: inline-block;
 } 
 
 .inner-menu ul li a {
-  color: rgb(255, 248, 248);
-  font-size: 20px;
+  color: black;
+  /* font-size: 20px; */
   text-transform: uppercase;
   display: block;
-  padding: 10px 20px; 
+  text-decoration: none;
 }
 
 .inner-menu ul li a:hover {
-  color: #4056A1;
+  color: purple;
 }
 
 .inner-menu img {
-  width:200px;
-  height:123px;
+  width: 9rem;
+  height: 5rem;
 }
 
 /* Begin post page cards */
