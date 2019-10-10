@@ -1,0 +1,95 @@
+body {
+    background: url("../IMAGES/bg2.jpg");
+    background-repeat: no-repeat;
+    /* background-position: right top; */
+    background-attachment: fixed;
+    
+}
+
+#new-post-form {
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
+/* Begin Navbar */
+.navbar {
+    width: 100%;
+    background: #f6e7cbc7;
+    z-index: 2;
+  }
+  
+  .inner-menu {
+  margin: auto;
+  width: 1170px;
+  } 
+  
+  .inner-menu ul {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    text-align: center; 
+  }
+  
+  .inner-menu ul li {
+  float: none;
+  display: inline-block;
+  } 
+  
+  .inner-menu ul li a {
+    color: rgb(255, 248, 248);
+    font-size: 20px;
+    text-transform: uppercase;
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  .inner-menu ul li a:hover {
+    color: #4056A1;
+  }
+  
+  .inner-menu img {
+    width:200px;
+    height:123px;
+  }
+
+
+   /* scroll up the page arrow */
+   #scrollUp {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F90;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.material-icons {
+    padding: 6.5px;
+}
+
+#scrollUp:active {
+    background: #000;
+}
+
+.btn {
+    background-color: rgb(46, 57, 104);
+    color: rgb(241, 237, 237);
+    display: block;
+    max-width: 300px;
+    margin: auto;
+}
+
+.card {
+    background-color: rgba(221, 212, 212, 0.363);
+}
+
+#new-post-form {
+    padding: 30px;
+}
