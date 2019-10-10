@@ -9,6 +9,10 @@ body {
     font-family: sans-serif;
     height: 100vh;
     background-attachment: fixed;
+    background: url("../IMAGES/bg7.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: cover;
   }
 
   /* bootstrap carousel */
@@ -140,7 +144,7 @@ display: inline-block;
   font-size: 20px;
   text-transform: uppercase;
   display: block;
-  /* padding: 10px 20px; */
+  padding: 10px 20px; 
 }
 
 .inner-menu ul li a:hover {
@@ -154,9 +158,9 @@ display: inline-block;
 
 /* Begin post page cards */
 .card {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.959);
   float: left;
-  color: #1b1407;
+  color: #1b1407fd;
   padding: 0px;
   margin-bottom: 10px;
 }
@@ -173,14 +177,13 @@ display: inline-block;
 
 .center-con {
   display: flex;
-  /* height: 100vh; */
   align-items: center;
   justify-content: center;
 }
 
 .round {
   position: relative;
-  border: 3px solid #fff;
+  border: 3px solid rgba(255, 255, 255, 0.116);
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -246,9 +249,12 @@ span:nth-child(4) {
 
 
 /* heading on post page */
+
+.container1{
+  padding-top: 40px;
+}
  h2 {
-  padding: 20px;
-  color: rgb(10, 13, 26);
+  color: rgb(245, 243, 239);
 }
 
 .rating {
