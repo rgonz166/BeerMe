@@ -54,11 +54,19 @@ window.onload = function() {
         $("#getResultDiv ul").empty();
         $.each(result, function(i, beers) {
           $("#getResultDiv .list-group").append(
-            "Beer Name: " +
+            "<div class=card style= width: 18rem><div class= card-body> <h5 class = card-title>" +
+              beers.beername +
+              "</h5> <p class = card-text>" +
+              beers.reviews +
+              "</p> </div> </div>" +
+              "Beer Name: " +
               beers.beername +
               " " +
               "Rating: " +
               beers.rating +
+              " " +
+              "Reviews: " +
+              beers.reviews +
               "<br>"
           );
         });
@@ -70,6 +78,15 @@ window.onload = function() {
       }
     });
   }
+//   <div class="card" style="width: 18rem;">
+//   <div class="card-body">
+//     <h5 class="card-title">Card title</h5>
+//     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+//     <a href="#" class="card-link">Card link</a>
+//     <a href="#" class="card-link">Another link</a>
+//   </div>
+// </div>
 };
 //figure out how to post to its particular card
 //if tag
