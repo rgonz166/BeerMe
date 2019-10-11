@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "@4DaCode",
+    "password": "",
     "database": "beerme_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "@4DaCode",
+    "password": "",
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",
