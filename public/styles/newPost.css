@@ -37,20 +37,21 @@ body {
   } 
   
   .inner-menu ul li a {
-    color: rgb(255, 248, 248);
+    color: black;
     font-size: 20px;
     text-transform: uppercase;
     display: block;
+    text-decoration: none;
     padding: 10px 20px;
   }
   
   .inner-menu ul li a:hover {
-    color: #4056A1;
+    color: purple;
   }
   
   .inner-menu img {
-    width:200px;
-    height:123px;
+    width: 145px;
+    height: 100px;
   }
 
 
@@ -92,4 +93,32 @@ body {
 
 #new-post-form {
     padding: 30px;
+}
+
+.rating span { float:right; position: relative;; }
+.rating span input {
+    position:absolute;
+    top:0px;
+    left:0px;
+    opacity:0;
+}
+.rating span label {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    text-align:center;
+    color:#FFF;
+    background:#ccc;
+    font-size:30px;
+    margin-right:2px;
+    line-height:30px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.rating span:hover ~ span label,
+.rating span:hover label,
+.rating span.checked label,
+.rating span.checked ~ span label {
+    background:#F90;
+    color:#FFF;
 }
