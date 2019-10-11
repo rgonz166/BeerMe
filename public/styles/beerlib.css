@@ -62,7 +62,19 @@ display: inline-block;
         margin: 0 auto;
         float: none;
         margin-bottom: 10px;
-        margin-left: 33%;
+        margin-left: 10%;
+       
+        
+    }
+    .card-body{
+
+      width: 300px;
+      word-wrap: break-word;
+      float: left;
+    }
+    .list-group{
+      padding-top:3%;
+      display: inline-block;
     }
     /* .btn-primary{
         /* margin: 0 auto;
