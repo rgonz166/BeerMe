@@ -62,7 +62,25 @@
       </ul>
     </div>
 
+    <button id="scrollUp">
+        <i class="material-icons">arrow_upwards</i>
+    </button>
 
+</div>
+</div>
+
+
+
+ <script>
+     const btnScrollToTop = document.querySelector("#scrollUp");
+     btnScrollToTop.addEventListener("click" , function () {
+         window.scrollTo({
+             top: 0,
+             left: 0,
+             behavior: "smooth"
+         });
+     });
+ </script>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
