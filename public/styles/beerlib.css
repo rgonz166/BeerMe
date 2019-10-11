@@ -53,6 +53,7 @@ display: inline-block;
 .btn-group{
   margin:auto;
   margin-left: 3%;
+  margin-top: 3px;
 }
 .btn {
   background: transparent;
@@ -116,51 +117,55 @@ display: inline-block;
     margin-bottom: 10px; /* Added */
 }
 
-    .card-title {
-        margin: 0 auto;
-        float: none;
-        margin-bottom: 10px;
-        margin-left: 10%;
-       
-        
-    }
-    .card-body{
+.card-title {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-left: 10%;
+    
+    
+}
+.card-body{
 
-      width: 300px;
-      word-wrap: break-word;
-      float: left;
-    }
-    .list-group{
-      padding-top:3%;
-      display: inline-block;
-    }
-    /* .btn-primary{
-        /* margin: 0 auto;
-        float: none;
-        margin-bottom: 10px;
-        margin-left: 33%;
-    } */
+  width: 300px;
+  word-wrap: break-word;
+  float: left;
+}
+.list-group{
+  padding-top:3%;
+  display: inline-block;
+}
+/* .btn-primary{
+    /* margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    margin-left: 33%;
+} */
 
-    /* scroll up the page arrow */
-    #scrollUp {
-        position: fixed;
-        right: 10px;
-        bottom: 10px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #F90;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-        color: #FFF;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-  
-    .material-icons {
-        padding: 6.5px;
-    }
-  
-    #scrollUp:active {
-        background: #000;
-    }
+/* scroll up the page arrow */
+#scrollUp {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F90;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.material-icons {
+    padding: 6.5px;
+}
+
+#scrollUp:active {
+    background: #000;
+}
+
+#getResultDiv{
+  padding-top: 20px;
+}
