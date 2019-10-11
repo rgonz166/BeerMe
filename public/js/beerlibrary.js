@@ -32,20 +32,9 @@ window.onload = function() {
       console.log(beerCategory);
       ajaxGet(beerCategory);
     }
-    // $.get("/api/beers/" + id{
-
-    //   if (data) {
-    //     // If this post exists, prefill our cms forms with its data
-    //     titleInput.val(data.title);
-    //     bodyInput.val(data.body);
-    //     postCategorySelect.val(data.category);
-    //     // If we have a post with this id, set a flag for us to know to update the post
-    //     // when we hit submit
-    //     updating = true;
-    //   }
-    // });
   }
   function ajaxGet(beerCategory) {
+    //will print out to html with all data of beers
     console.log("there beer goes into ajaxGet(): " + beerCategory);
     $.ajax({
       type: "GET",
@@ -54,19 +43,16 @@ window.onload = function() {
         $("#getResultDiv ul").empty();
         $.each(result, function(i, beers) {
           $("#getResultDiv .list-group").append(
-            "<div class=card style= width: 18rem><div class= card-body> <h5 class = card-title>" +
+            "<div class=card><div class= card-body> <h5 class = card-title>" +
               beers.beername +
               "</h5> <p class = card-text>" +
+              "Review of Beer: " +
               beers.reviews +
-              "</p> </div> </div>" +
-              "Beer Name: " +
-              beers.beername +
-              " " +
+              "</p>" +
+              "<p class = beer-review>" +
               "Rating: " +
               beers.rating +
-              " " +
-              "Reviews: " +
-              beers.reviews +
+              " </p> </div> </div>" +
               "<br>"
           );
         });
@@ -78,49 +64,4 @@ window.onload = function() {
       }
     });
   }
-//   <div class="card" style="width: 18rem;">
-//   <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-//     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//     <a href="#" class="card-link">Card link</a>
-//     <a href="#" class="card-link">Another link</a>
-//   </div>
-// </div>
 };
-//figure out how to post to its particular card
-//if tag
-// function buttonCompare(cardName, beerCategory) {
-//   var newCardname = cardName + "- card-title";
-//   console.log("this is the name with OUT card title: " + cardName);
-//   //console.log("passed the button into buttonCompare: " + newCardname);
-//   //console.log("with hyphen WILL NEED THIS " + hyphenButton); //use this for empty div
-//   var cardArray = [
-//     "pilsner- card-title",
-//     "brown-ale- card-title",
-//     "porter- card-title",
-//     "wheat-beer- card-title",
-//     "dark-lager- card-title",
-//     "pale-ale- card-title",
-//     "stout- card-title",
-//     "wild-sour-ale- card-title",
-//     "german-black- card-title",
-//     "india-pale-ale- card-title",
-//     "belgian-style-ale- card-title",
-//     "specialty-beer- card-title"
-//   ];
-//   for (var i = 0; i < cardArray.length; i++) {
-//     //this will only print underneath the card title
-//     // console.log(cardArray[i]);
-//     if (newCardname === cardArray[i]) {
-//       console.log(newCardname + " = " + cardArray[i] + " MATCH ");
-//       //var cardLast = JSON.stringify("." + cardName);
-//       //var insertDiv = JSON.stringify("." + newCardname);
-//       // console.log(insertDiv);
-//       //console.log(typeof insertDiv);
-//       //console.log("passing this to jquery: " + cardLast);
-//       $("." + cardName).after("<div id = name-of-button-> HERE </div>");
-//       // $("." + hyphenButton).empty();
-//     }
-//   }
-// }
