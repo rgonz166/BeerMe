@@ -1,7 +1,7 @@
 window.onload = function() {
   $(".btn-primary").on("click", function(event) {
     console.log(this);
-    
+
     var buttonName = this.className;
     console.log(buttonName); //will show what button beer is being clicked on
     var res = buttonName.split(" "); // will split the class string name by spaces
@@ -71,4 +71,4 @@ window.onload = function() {
   }
 };
 //figure out how to post to its particular card
-//if tag 
+//if tag

@@ -19,9 +19,9 @@ $(document).ready(function() {
       return;
     }
     // Check if username exists
-      // function checkUser(user){
+    // function checkUser(user){
 
-      // }
+    // }
     // Constructing a newPost object to hand to the database
     var newUser = {
       username: userNameInput.val().trim(),

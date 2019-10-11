@@ -12,8 +12,8 @@ module.exports = function(app) {
       res.json(dbBeers);
     });
   });
-//-----------------------
-//I am going to need to use this "/api/beers/:category" to print out all the beers
+  //-----------------------
+  //I am going to need to use this "/api/beers/:category" to print out all the beers
   // Gets the beers by category from beerme_db
   app.get("/api/beers/:category", function(req, res) {
     db.Beers.findAll({
@@ -107,24 +107,11 @@ module.exports = function(app) {
   //                          Users - Storing to Database
   // ===========================================================================
 
-<<<<<<< HEAD
-  // app.get("/api/users", function(req,res){
-  //   db.User.findAll({}).then(function(users){
-  //     res.json(users);
-  //   });
-  // });
-
-  // Get username and check password
-  app.get("/api/users/:user", function(req,res){
-    db.User.
-  })
-=======
   app.get("/api/users", function(req, res) {
     db.User.findAll({}).then(function(users) {
       res.json(users);
     });
   });
->>>>>>> master
 
   app.post("/api/user", function(req, res) {
     console.log(req.body);
