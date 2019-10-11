@@ -12,8 +12,8 @@ module.exports = function(app) {
       res.json(dbBeers);
     });
   });
-//-----------------------
-//I am going to need to use this "/api/beers/:category" to print out all the beers
+  //-----------------------
+  //I am going to need to use this "/api/beers/:category" to print out all the beers
   // Gets the beers by category from beerme_db
   app.get("/api/beers/:category", function(req, res) {
     db.Beers.findAll({
