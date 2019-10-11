@@ -1,13 +1,14 @@
 window.onload = function() {
   $(".btn-primary").on("click", function(event) {
     console.log(this);
-    
-    var buttonName = this.className;
-    console.log(buttonName); //will show what button beer is being clicked on
-    var res = buttonName.split(" "); // will split the class string name by spaces
-    console.log(res[0]);
+
+    var cardName = this.className;
+    console.log(cardName); //will show what button beer is being clicked on
+    var res = cardName.split(" "); // will split the class string name by spaces
+    console.log("with no and hyphen " + res[0]);
     event.preventDefault();
     getCategoyBeer(res[0]);
+    // buttonCompare(res[0], cardName);
     // Storing the artist name
   });
 
@@ -71,4 +72,38 @@ window.onload = function() {
   }
 };
 //figure out how to post to its particular card
-//if tag 
+//if tag
+// function buttonCompare(cardName, beerCategory) {
+//   var newCardname = cardName + "- card-title";
+//   console.log("this is the name with OUT card title: " + cardName);
+//   //console.log("passed the button into buttonCompare: " + newCardname);
+//   //console.log("with hyphen WILL NEED THIS " + hyphenButton); //use this for empty div
+//   var cardArray = [
+//     "pilsner- card-title",
+//     "brown-ale- card-title",
+//     "porter- card-title",
+//     "wheat-beer- card-title",
+//     "dark-lager- card-title",
+//     "pale-ale- card-title",
+//     "stout- card-title",
+//     "wild-sour-ale- card-title",
+//     "german-black- card-title",
+//     "india-pale-ale- card-title",
+//     "belgian-style-ale- card-title",
+//     "specialty-beer- card-title"
+//   ];
+//   for (var i = 0; i < cardArray.length; i++) {
+//     //this will only print underneath the card title
+//     // console.log(cardArray[i]);
+//     if (newCardname === cardArray[i]) {
+//       console.log(newCardname + " = " + cardArray[i] + " MATCH ");
+//       //var cardLast = JSON.stringify("." + cardName);
+//       //var insertDiv = JSON.stringify("." + newCardname);
+//       // console.log(insertDiv);
+//       //console.log(typeof insertDiv);
+//       //console.log("passing this to jquery: " + cardLast);
+//       $("." + cardName).after("<div id = name-of-button-> HERE </div>");
+//       // $("." + hyphenButton).empty();
+//     }
+//   }
+// }
