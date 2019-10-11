@@ -40,9 +40,9 @@ window.onload = function() {
       type: "GET",
       url: "/api/beers/" + beerCategory,
       success: function(result) {
-        $("#getResultDiv ul").empty();
+        $(".card-columns").empty();
         $.each(result, function(i, beers) {
-          $("#getResultDiv .list-group").append(
+          $(".card-columns").append(
             "<div class=card><div class= card-body> <h5 class = card-title>" +
               beers.beername +
               "</h5> <p class = card-text>" +
@@ -59,7 +59,7 @@ window.onload = function() {
         console.log("Success: ", result);
       },
       error: function(e) {
-        $("#getResultDiv").html("<strong>Error</strong>");
+        $(".card-columns").html("<strong>Error</strong>");
         console.log("ERROR: ", e);
       }
     });
