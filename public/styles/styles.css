@@ -5,28 +5,36 @@ body {
   overflow-x: hidden;
     margin: 0;
     padding: 0;
-    background:rgb(238, 234, 224);
+    background:rgba(248, 248, 246, 0.945);
     font-family: sans-serif;
     height: 100vh;
     background-attachment: fixed;
+    background: url("../IMAGES/bg7.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: cover;
   }
 
   /* bootstrap carousel */
   .carousel-item {
     height: 100vh;
-    z-index: 1;
+    z-index: 1; 
   }
- 
-  /* Welcome message */
-  .welcome h1{
-    font-family: 'Ultra', serif;
-    font-size: 45px;
-    position: absolute;
-    color: #fff;
-    z-index: 2;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+  .carousel {
+    /* top: 20%; */
+    overflow: hidden;
+  }
+  .login-section {
+    background-image: url(images/fred-crandon-fulpvaLUX3A-unsplash.jpg);
+    background-size: cover;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
   }
   
   /* login box */
@@ -34,12 +42,8 @@ body {
     width: 320px;
     height: 420px;
     color: #fff;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
   }
+  
   .login-box {
     padding: 70px 30px;
   }
@@ -105,13 +109,16 @@ body {
     color: #fff;
   }
 
-
+/* Begin Navbar */
 .navbar {
-  background: rgb(241, 170, 38);
+  width: 100%;
+  background: #f6e7cbb6;
+  position: absolute;
+  z-index: 2;
 }
 
 .inner-menu {
-margin: 0 auto;
+margin: auto;
 width: 1170px;
 } 
 
@@ -125,41 +132,124 @@ width: 1170px;
 .inner-menu ul li {
 float: none;
 display: inline-block;
-}
+} 
 
 .inner-menu ul li a {
-  color: rgb(255, 248, 248);
-  font-size: 20px;
+  color: black;
+  /* font-size: 20px; */
   text-transform: uppercase;
   display: block;
-  padding: 10px 20px;
+  text-decoration: none;
 }
 
 .inner-menu ul li a:hover {
-  color: #4056A1;
+  color: purple;
 }
 
 .inner-menu img {
-  width:200px;
-  height:123px;
+  width: 9rem;
+  height: 5rem;
 }
 
-#main-menu {
-  position: relative; 
- 
-}
-
+/* Begin post page cards */
 .card {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.959);
   float: left;
-  color: #1b1407;
+  color: #1b1407fd;
   padding: 0px;
   margin-bottom: 10px;
 }
 
-h2 {
-  padding: 20px;
-  color: rgb(10, 13, 26);
+/* collapse button */
+
+.col-mt-3 {
+  text-align: center;
+}
+
+.infoText {
+  padding: 7px;
+}
+
+.center-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round {
+  position: relative;
+  border: 3px solid rgba(255, 255, 255, 0.116);
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+
+span {
+  z-index: 999;
+  height: 3px;
+  margin:1px;
+  width: 10px;
+  background: rgb(221, 161, 49);
+  transition: 0.4s ease;
+}
+
+span:first-child {
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 20%;
+  bottom: 35%;
+}
+
+span:nth-child(2) {
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 40%;
+  bottom: 35%;
+}
+
+span:nth-child(3) {
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 20%;
+  bottom: 60%;
+}
+
+span:nth-child(4) {
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 40%;
+  bottom: 60%;
+}
+
+.round:hover span:nth-child(1) {
+  transform: rotate(-135deg);
+} 
+
+.round:hover span:nth-child(2) {
+  transform: rotate(135deg);
+}
+
+.round:hover span:nth-child(3) {
+  transform: rotate(225deg);
+}
+
+.round:hover span:nth-child(4) {
+  transform: rotate(-225deg);
+} */
+
+
+
+/* heading on post page */
+
+.container1{
+  padding-top: 40px;
+}
+ h2 {
+  color: rgb(245, 243, 239);
 }
 
 .rating {
@@ -193,6 +283,26 @@ h2 {
     background:#F90;
     color:#FFF;
 }
+/* scroll up the page arrow */
+#scrollUp {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #F90;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color: #FFF;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
 
+.material-icons {
+  padding: 6.5px;
+}
 
-
+#scrollUp:active {
+  background: #000;
+}

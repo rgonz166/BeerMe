@@ -1,6 +1,6 @@
-$(document).ready(function () {
-    // Check Radio-box
-    $(".rating input:radio").attr("checked", false);
+$(document).ready(function() {
+  // Check Radio-box
+  $(".rating input:radio").attr("checked", false);
 
     $('.rating input').click(function () {
         $(".rating span").removeClass('checked');
@@ -15,15 +15,24 @@ $(document).ready(function () {
     var ratingSelect;
     var categorySelect = $("#category");
     var registerForm = $("#new-post-form");
+  $(".rating input").click(function() {
+    $(".rating span").removeClass("checked");
+    $(this)
+      .parent()
+      .addClass("checked");
+  });
 
-    $('input:radio').change(
-        function () {
-            ratingSelect = this.value;
-        }
-    ); 
+  // Getting jQuery references to the post body, title, form, and author select
+  //   var userId = $("#user-id");
+  var beerNameInput = $("#beer-name");
+  var reviewInput = $("#review");
+  var ratingSelect;
+  var categorySelect = $("#category");
+  var registerForm = $("#new-post-form");
 
-    // Event listener when form is submitted
-    $(registerForm).on("submit", handleFormSubmit);
+  $("input:radio").change(function() {
+    ratingSelect = this.value;
+  });
 
     function handleFormSubmit(event) {
         event.preventDefault();
@@ -40,13 +49,36 @@ $(document).ready(function () {
             review: reviewInput.val().trim(),
             rating: ratingSelect
         };
+  // Event listener when form is submitted
+  $(registerForm).on("submit", handleFormSubmit);
 
-        submitNewPost(newPost);
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    // Wont submit the post if we are missing a body, title, or author
+    if (
+      !beerNameInput.val().trim() ||
+      !reviewInput.val().trim() ||
+      ratingSelect === undefined ||
+      categorySelect.val() === "select-one"
+    ) {
+      // console.log();
+      return;
     }
+    // Constructing a newPost object to hand to the database
+    var newPost = {
+      userId: 4,
+      category: categorySelect.find(":selected").text(),
+      beerName: beerNameInput.val().trim(),
+      review: reviewInput.val().trim(),
+      rating: ratingSelect
+    };
 
-    function submitNewPost(post) {
-        $.post("/api/post", post, function () {
-            window.location.href = "/posts";
-        });
-    }
+    submitNewPost(newPost);
+  }
+
+  function submitNewPost(post) {
+    $.post("/api/post", post, function() {
+      window.location.href = "/posts";
+    });
+  }
 });

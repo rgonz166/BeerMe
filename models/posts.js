@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-    var Post = sequelize.define("Post", {
+  var Post = sequelize.define(
+    "Post",
+    {
       userId: {
         type: DataTypes.INTEGER,
         allowNull: false
@@ -27,10 +29,12 @@ module.exports = function(sequelize, DataTypes) {
       },
       rating: {
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull: false
       }
-    },{
-        timestamps:true
-      });
-    return Post;
-  };
+    },
+    {
+      timestamps: true
+    }
+  );
+  return Post;
+};
