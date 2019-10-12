@@ -34,6 +34,7 @@ $(document).ready(function() {
 
   function submitNewUser(user) {
     $.post("/api/user", user, function() {
+      Cookies.set("username", user.username);
       window.location.href = "/";
     });
   }

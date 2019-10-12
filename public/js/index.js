@@ -30,6 +30,7 @@ $(document).ready(function() {
     // do nothing
     return;
   } else {
+    $("#login-text").text(Cookies.get("username"));
     console.log(Cookies.get("username"));
   }
 });
