@@ -1,5 +1,12 @@
 // get values from form
 $(document).ready(function() {
+  // check if signed in
+  if (Cookies.get("username") === undefined) {
+    // do nothing
+    return;
+  } else {
+    $("#login-text").text(Cookies.get("username"));
+  }
   // variables
   var usernameInput = $("#username");
   var passwordInput = $("#password");

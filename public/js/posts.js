@@ -8,6 +8,13 @@ btnScrollToTop.addEventListener("click", function() {
 });
 
 $(document).ready(function() {
+  // check if signed in
+  if (Cookies.get("username") === undefined) {
+    // do nothing
+    return;
+  } else {
+    $("#login-text").text(Cookies.get("username"));
+  }
   // var postCounter = 0;
   // Get variables
   var postsArea = $("#posts-area");
@@ -26,22 +33,25 @@ $(document).ready(function() {
       // i < (postsAmount * postCounter)
       for (var i = 0; i < result.length; i++) {
         switch (result[i].beerName) {
-          case "Stone IPA":
-            beerImg =
+        case "Stone IPA":
+          beerImg =
               "https://products0.imgix.drizly.com/ci-stone-ipa-87ab6232002e817e.png?auto=format%2Ccompress&fm=jpeg&q=20";
-            break;
-          case "Pacifico":
-            beerImg =
+          break;
+        case "Pacifico":
+          beerImg =
               "https://products0.imgix.drizly.com/ci-pacifico-clara-c4083c054131f5c0.png?auto=format%2Ccompress&fm=jpeg&q=20";
+          break;
+        case "Negra Modelo":
+          beerImg ="https://products3.imgix.drizly.com/ci-negra-modelo-5e9fde4dff726bf8.jpeg?auto=format%2Ccompress&fm=jpeg&q=20";
+          break;
+        case "Stone Smoked Porter":
+          beerImg ="https://products1.imgix.drizly.com/ci-stone-smoked-porter-807620fe06a4ed26.jpeg?auto=format%2Ccompress&fm=jpeg&q=20";
+          break;
+        case "Guinnes":
+            beerImg = "https://dydza6t6xitx6.cloudfront.net/ci-guinness-draught-57a370742d804361.png";
             break;
-          case "Negra Modelo":
-            beerImg ="https://products3.imgix.drizly.com/ci-negra-modelo-5e9fde4dff726bf8.jpeg?auto=format%2Ccompress&fm=jpeg&q=20";
-            break;
-          case "Stone Smoked Porter":
-            beerImg ="https://products1.imgix.drizly.com/ci-stone-smoked-porter-807620fe06a4ed26.jpeg?auto=format%2Ccompress&fm=jpeg&q=20";
-            break;
-          default:
-            beerImg =
+        default:
+          beerImg =
               "https://upload.wikimedia.org/wikipedia/en/6/60/No_Picture.jpg";
         }
         postsArea.append(
