@@ -107,12 +107,6 @@ module.exports = function(app) {
   //                          Users - Storing to Database
   // ===========================================================================
 
-  app.get("/api/users", function(req, res) {
-    db.User.findAll({}).then(function(users) {
-      res.json(users);
-    });
-  });
-
   app.post("/api/user", function(req, res) {
     console.log(req.body);
     db.User.create({
@@ -128,6 +122,22 @@ module.exports = function(app) {
   //                          Users - Logging in to Database
   // ===========================================================================
 
+  app.get("/api/users", function (req, res) {
+    db.User.findAll({}).then(function (users) {
+      res.json(users);
+    });
+  });
+
+  app.get("/api/users/:user", function(req, res) {
+    db.User.findOne({
+      where: {
+        username: req.params.user
+      }
+    }).then(function(userDb) {
+      res.json(userDb);
+    });
+  });
+
   // ===========================================================================
   //                          Posts - Storing to Database
   // ===========================================================================
@@ -136,7 +146,7 @@ module.exports = function(app) {
   app.post("/api/post", function(req, res) {
     console.log(req.body);
     db.Post.create({
-      userId: req.body.userId,
+      username: req.body.username,
       category: req.body.category,
       beerName: req.body.beerName,
       review: req.body.review,

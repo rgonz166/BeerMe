@@ -65,3 +65,5 @@ window.onload = function() {
     });
   }
 };
+//figure out how to post to its particular card
+//if tag

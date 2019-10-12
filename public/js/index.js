@@ -13,7 +13,6 @@ window.addEventListener("scroll", function() {
 $("#navBar a").on("click", function(e) {
   if (this.hash !== "") {
     e.preventDefault();
-
     var hash = this.hash;
 
     $("html, body").animate(
@@ -22,5 +21,16 @@ $("#navBar a").on("click", function(e) {
       },
       800
     );
+  }
+});
+
+$(document).ready(function() {
+  // check if username exists
+  if (Cookies.get("username") === undefined) {
+    // do nothing
+    return;
+  } else {
+    $("#login-text").text(Cookies.get("username"));
+    console.log(Cookies.get("username"));
   }
 });

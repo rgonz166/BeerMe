@@ -18,6 +18,10 @@ $(document).ready(function() {
     ) {
       return;
     }
+    // Check if username exists
+    // function checkUser(user){
+
+    // }
     // Constructing a newPost object to hand to the database
     var newUser = {
       username: userNameInput.val().trim(),
@@ -30,6 +34,7 @@ $(document).ready(function() {
 
   function submitNewUser(user) {
     $.post("/api/user", user, function() {
+      Cookies.set("username", user.username);
       window.location.href = "/";
     });
   }

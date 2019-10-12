@@ -31,17 +31,21 @@
 
     <div class="login-box">
       <h1>Login Here</h1>
-      <form>
+      <form id="login-form">
         <!-- USERNAME INPUT -->
         <label for="username">Username</label>
-        <input type="text" placeholder="Enter Username">
+        <input type="text" placeholder="Enter Username" id="username">
         <!-- PASSWORD INPUT -->
         <label for="password">Password</label>
-        <input type="password" placeholder="Enter Password">
+        <input type="password" placeholder="Enter Password" id="password">
         <input type="submit" value="Log In">
         <a href="#">Lost your Password?</a><br>
         <a href="/register">Don't have An account?</a>
       </form>
     </div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <script src="../js/login.js"></script>
   </body>
 </html>
