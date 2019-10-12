@@ -4,13 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeerMe | Login</title>
-    
-  <link rel="stylesheet" href="styles/login.css">
-
+    <link rel="stylesheet" href="styles/login.css">
+        <link rel="stylesheet" href="styles/navbar.css">
 
   </head>
   <body>
-
+    <div class="navbar">
+      <!-- <div id="main-menu"></div> -->
+      <div class="inner-menu">
+        <ul>
+          <li><a href="/beers">BEERS</a></li>
+          <li><a href="/posts">FEED</a></li>
+          <li><a href="/"><img src="./IMAGES/Logo.png" alt="logo"></a></li>
+          <li><a href="/posts/newPost">POST</a></li>
+          <li><a id="login-text" href="/login">LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="login-box">
       <h1>Login Here</h1>
       <form id="login-form">

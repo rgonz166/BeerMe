@@ -4,6 +4,7 @@ $(document).ready(function() {
     alert("Please login before writing a post.");
     window.location.href = "/login";
   } else {
+    $("#login-text").text(Cookies.get("username"));
     // Check Radio-box
     $(".rating input:radio").attr("checked", false);
 
