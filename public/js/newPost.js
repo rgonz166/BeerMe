@@ -61,7 +61,6 @@ $(document).ready(function() {
         review: reviewInput.val().trim(),
         rating: ratingSelect
       };
-
       submitNewPost(newPost);
     }
 
