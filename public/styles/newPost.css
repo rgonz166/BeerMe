@@ -95,7 +95,7 @@ body {
     padding: 30px;
 }
 
-.rating span { float:right; position: relative;; }
+.rating span { float:right; position: relative;; transform: translate(-340%,20%); display: flex;}
 .rating span input {
     position:absolute;
     top:0px;

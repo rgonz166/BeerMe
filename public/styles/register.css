@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(../img/bg.jpeg) no-repeat center top;
+  background: url(../IMAGES/bg8.jpg) no-repeat center top;
   background-size: cover;
   font-family: sans-serif;
   height: 100vh;
@@ -9,10 +9,10 @@ body {
 
 .register-box {
   width: 320px;
-  height: 420px;
-  background: #000;
-  color: #fff;
-  top: 50%;
+  height: 485px;
+  background: rgba(7, 6, 4, 0.856);
+    color: #fff;
+  top: 59%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);

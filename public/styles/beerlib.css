@@ -1,7 +1,7 @@
 body {
     background: url("../IMAGES/bg5.jpg");
     background-repeat: no-repeat;
-    /* background-position: right top; */
+    background-position: right top; 
     background-attachment: fixed;
     
 }

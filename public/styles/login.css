@@ -1,18 +1,61 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(../img/bg.jpeg) no-repeat center top;
+  background: url(images/fred-crandon-fulpvaLUX3A-unsplash.jpg) no-repeat center top;
   background-size: cover;
   font-family: sans-serif;
   height: 100vh;
 }
 
+/* Begin Navbar */
+.navbar {
+  width: 100%;
+  background: #f6e7cbc7;
+  z-index: 2;
+}
+
+.inner-menu {
+margin: auto;
+width: 1170px;
+} 
+
+.inner-menu ul {
+  margin: 0;
+  padding:0;
+  list-style: none;
+  text-align: center; 
+}
+
+.inner-menu ul li {
+float: none;
+display: inline-block;
+} 
+
+.inner-menu ul li a {
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  padding: 50px 20px;
+}
+
+.inner-menu ul li a:hover {
+  color: purple;
+}
+
+.inner-menu img {
+  width: 145px;
+  height: 100px;
+}
+
+
 .login-box {
   width: 320px;
   height: 420px;
-  background: #000;
+  background: rgba(7, 6, 4, 0.856);
   color: #fff;
-  top: 50%;
+  top: 55%;
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);

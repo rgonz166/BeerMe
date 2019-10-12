@@ -46,8 +46,33 @@ body {
   .inner-menu img {
     width: 145px;
     height: 100px;
-  } */
+  } 
   
+  /*beginning of horizontal scroll */
+  
+  /* .scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  
+  .scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+  }
+ 
+  .scrolling-wrapper, .scrolling-wrapper-flexbox {
+    height: 450px;
+    margin-bottom: 20px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+   */
+
   /* Begin post page cards */
   .card {
     background: rgba(255, 255, 255, 0.959);
