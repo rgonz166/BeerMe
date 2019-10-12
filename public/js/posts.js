@@ -1,3 +1,4 @@
+
 var btnScrollToTop = document.querySelector("#scrollUp");
 btnScrollToTop.addEventListener("click", function() {
   window.scrollTo({
@@ -28,7 +29,7 @@ $(document).ready(function() {
       console.log(result);
       // for when we have more posts
       // i < (postsAmount * postCounter)
-      for (var i = 0; i < result.length; i++) {
+      for (var i = 0; i < 4; i++) {
         switch (result[i].beerName) {
         case "Stone IPA":
           beerImg =
