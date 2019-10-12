@@ -9,10 +9,7 @@ btnScrollToTop.addEventListener("click", function() {
 
 $(document).ready(function() {
   // check if signed in
-  if (Cookies.get("username") === undefined) {
-    // do nothing
-    return;
-  } else {
+  if (Cookies.get("username") !== undefined) {
     $("#login-text").text(Cookies.get("username"));
   }
   // var postCounter = 0;
