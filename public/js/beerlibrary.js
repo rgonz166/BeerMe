@@ -65,8 +65,5 @@ window.onload = function() {
     });
   }
 };
-<<<<<<< HEAD
 //figure out how to post to its particular card
 //if tag
-=======
->>>>>>> master
