@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  var userId = Cookies.get("username");
-  if (userId === undefined) {
+  var username = Cookies.get("username");
+  if (username === undefined) {
     alert("Please login before writing a post.");
     window.location.href = "/login";
   } else {
@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
 
     // Getting jQuery references to the post body, title, form, and author select
-    //   var userId = $("#user-id");
+    //   var username = $("#user-id");
     var beerNameInput = $("#beer-name");
     var reviewInput = $("#review");
     var ratingSelect;
@@ -51,12 +51,11 @@ $(document).ready(function() {
         ratingSelect === undefined ||
         categorySelect.val() === "select-one"
       ) {
-        // console.log();
         return;
       }
       // Constructing a newPost object to hand to the database
       var newPost = {
-        userId: 4,
+        username: username,
         category: categorySelect.find(":selected").text(),
         beerName: beerNameInput.val().trim(),
         review: reviewInput.val().trim(),

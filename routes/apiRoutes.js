@@ -146,7 +146,7 @@ module.exports = function(app) {
   app.post("/api/post", function(req, res) {
     console.log(req.body);
     db.Post.create({
-      userId: req.body.userId,
+      username: req.body.username,
       category: req.body.category,
       beerName: req.body.beerName,
       review: req.body.review,
