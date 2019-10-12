@@ -7,7 +7,7 @@ body {
   height: 100vh;
 }
 
-.login-box {
+.register-box {
   width: 320px;
   height: 420px;
   background: #000;
@@ -20,7 +20,7 @@ body {
   padding: 70px 30px;
 }
 
-.login-box .avatar {
+.register-box .avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -29,26 +29,26 @@ body {
   left: calc(50% - 50px);
 }
 
-.login-box h1 {
+.register-box h1 {
   margin: 0;
   padding: 0 0 20px;
   text-align: center;
   font-size: 22px;
 }
 
-.login-box label {
+.register-box label {
   margin: 0;
   padding: 0;
   font-weight: bold;
   display: block;
 }
 
-.login-box input {
+.register-box input {
   width: 100%;
   margin-bottom: 20px;
 }
 
-.login-box input[type="text"], .login-box input[type="password"] {
+.register-box input[type="text"], .register-box input[type="password"], .register-box input[type="email"] {
   border: none;
   border-bottom: 1px solid #fff;
   background: transparent;
@@ -58,7 +58,7 @@ body {
   font-size: 16px;
 }
 
-.login-box input[type="submit"] {
+.register-box input[type="submit"] {
   border: none;
   outline: none;
   height: 40px;
@@ -68,19 +68,19 @@ body {
   border-radius: 20px;
 }
 
-.login-box input[type="submit"]:hover {
+.register-box input[type="submit"]:hover {
   cursor: pointer;
   background: #ffc107;
   color: #000;
 }
 
-.login-box a {
+.register-box a {
   text-decoration: none;
   font-size: 12px;
   line-height: 20px;
   color: darkgrey;
 }
 
-.login-box a:hover {
+.register-box a:hover {
   color: #fff;
 }

@@ -2,8 +2,8 @@ module.exports = function(sequelize, DataTypes) {
   var Post = sequelize.define(
     "Post",
     {
-      userId: {
-        type: DataTypes.INTEGER,
+      username: {
+        type: DataTypes.STRING,
         allowNull: false
       },
       category: {
