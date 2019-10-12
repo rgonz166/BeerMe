@@ -1,5 +1,5 @@
 // get values from form
-$(document).ready(function () {
+$(document).ready(function() {
   // variables
   var usernameInput = $("#username");
   var passwordInput = $("#password");
@@ -12,13 +12,14 @@ $(document).ready(function () {
     $.ajax({
       type: "GET",
       url: "/api/users/" + usernameInput.val().trim(),
-      success: function (result) {
+      success: function(result) {
         if (result.length === null) {
           // no username
           alert("Username or password not correct");
-        } else if(passwordInput.val().trim() === result.password){
-          alert("Logged in");
-        } else{
+        } else if (passwordInput.val().trim() === result.password) {
+          Cookies.set("username", usernameInput.val().trim());
+          window.location.href = "/";
+        } else {
           alert("Username or password not correct");
         }
       }

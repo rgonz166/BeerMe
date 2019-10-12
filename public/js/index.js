@@ -23,3 +23,8 @@ $("#navBar a").on("click", function(e) {
     );
   }
 });
+
+$(document).ready(function() {
+  // check if username exists
+  // if()
+});
