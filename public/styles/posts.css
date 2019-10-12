@@ -170,3 +170,7 @@ body {
   #scrollUp:active {
     background: #000;
   }
+
+  .card-img-top{
+    height: 319.5px;
+  }
