@@ -26,5 +26,10 @@ $("#navBar a").on("click", function(e) {
 
 $(document).ready(function() {
   // check if username exists
-  // if()
+  if (Cookies.get("username") === undefined) {
+    // do nothing
+    return;
+  } else {
+    console.log(Cookies.get("username"));
+  }
 });
