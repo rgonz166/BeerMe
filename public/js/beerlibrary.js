@@ -2,12 +2,13 @@ window.onload = function() {
   $(".btn-primary").on("click", function(event) {
     console.log(this);
 
-    var buttonName = this.className;
-    console.log(buttonName); //will show what button beer is being clicked on
-    var res = buttonName.split(" "); // will split the class string name by spaces
-    console.log(res[0]);
+    var cardName = this.className;
+    console.log(cardName); //will show what button beer is being clicked on
+    var res = cardName.split(" "); // will split the class string name by spaces
+    console.log("with no and hyphen " + res[0]);
     event.preventDefault();
     getCategoyBeer(res[0]);
+    // buttonCompare(res[0], cardName);
     // Storing the artist name
   });
 
@@ -31,44 +32,41 @@ window.onload = function() {
       console.log(beerCategory);
       ajaxGet(beerCategory);
     }
-    // $.get("/api/beers/" + id{
-
-    //   if (data) {
-    //     // If this post exists, prefill our cms forms with its data
-    //     titleInput.val(data.title);
-    //     bodyInput.val(data.body);
-    //     postCategorySelect.val(data.category);
-    //     // If we have a post with this id, set a flag for us to know to update the post
-    //     // when we hit submit
-    //     updating = true;
-    //   }
-    // });
   }
   function ajaxGet(beerCategory) {
+    //will print out to html with all data of beers
     console.log("there beer goes into ajaxGet(): " + beerCategory);
     $.ajax({
       type: "GET",
       url: "/api/beers/" + beerCategory,
       success: function(result) {
-        $("#getResultDiv ul").empty();
+        $(".card-columns").empty();
         $.each(result, function(i, beers) {
-          $("#getResultDiv .list-group").append(
-            "Beer Name: " +
+          $(".card-columns").append(
+            "<div class=card><div class= card-body> <h5 class = card-title>" +
               beers.beername +
-              " " +
+              "</h5> <p class = card-text>" +
+              "Review of Beer: " +
+              beers.reviews +
+              "</p>" +
+              "<p class = beer-review>" +
               "Rating: " +
               beers.rating +
+              " </p> </div> </div>" +
               "<br>"
           );
         });
         console.log("Success: ", result);
       },
       error: function(e) {
-        $("#getResultDiv").html("<strong>Error</strong>");
+        $(".card-columns").html("<strong>Error</strong>");
         console.log("ERROR: ", e);
       }
     });
   }
 };
+<<<<<<< HEAD
 //figure out how to post to its particular card
 //if tag
+=======
+>>>>>>> master
