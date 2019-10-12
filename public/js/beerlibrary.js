@@ -1,3 +1,13 @@
+$(document).ready(function(){
+  // check if username exists
+  if (Cookies.get("username") === undefined) {
+    // do nothing
+    return;
+  } else {
+    $("#login-text").text(Cookies.get("username"));
+  }
+});
+
 window.onload = function() {
   $(".btn-primary").on("click", function(event) {
     console.log(this);

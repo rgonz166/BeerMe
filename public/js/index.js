@@ -31,6 +31,5 @@ $(document).ready(function() {
     return;
   } else {
     $("#login-text").text(Cookies.get("username"));
-    console.log(Cookies.get("username"));
   }
 });

@@ -157,9 +157,22 @@ module.exports = function(app) {
   });
 
   app.get("/api/posts", function(req, res) {
-    db.Post.findAll({}).then(function(posts) {
+    db.Post.findAll({
+      order:[['id','DESC']]
+    }).then(function(posts) {
       res.json(posts);
     });
   });
   // Update post to database
+
+  // delete a post
+  app.delete("/api/posts/:id", function (req, res) {
+    db.Post.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function (deleted) {
+      console.log('Deleted');
+    });
+  });
 };

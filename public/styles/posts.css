@@ -33,7 +33,7 @@ body {
   .inner-menu ul li a {
     color: black;
     font-size: 20px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     display: block;
     text-decoration: none;
     padding: 10px 20px;
@@ -194,4 +194,8 @@ body {
   
   #scrollUp:active {
     background: #000;
+  }
+
+  .card-img-top{
+    height: 319.5px;
   }
