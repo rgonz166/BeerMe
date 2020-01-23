@@ -16,5 +16,3 @@ This will install all necessary dependencies so you can get coding!
 * Javascript/jQuery
 * MySQL/Sequelize
 * Express
-
-## Authors
