@@ -1,4 +1,4 @@
-## BeerMe
+## [https://beerme-ucsd.herokuapp.com/](https://beerme-ucsd.herokuapp.com/)
 BeerMe is a social app that allows users to discover new craft beers. Users can login, discover beers, rate beers and enter new beers to the database.
 
 ## Installing and Development
