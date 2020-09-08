@@ -53,6 +53,7 @@ display: inline-block;
 .btn-group{
   margin:auto;
   margin-left: 3%;
+  margin-top: 3px;
 }
 .btn {
   background: transparent;
